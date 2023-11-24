@@ -1,3 +1,35 @@
-<div style="width: 100%;">
-    a
+<h1>Products</h1>
+<hr>
+<div class="container">
+    <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <div style="position: relative;">
+            <input type="text" [(ngModel)]="searchText" placeholder="Search by Code or Name"
+                style="padding-right: 30px;" (ngModelChange)="search()">
+            <span class="material-icons md-48"
+                style="position: absolute; top: 50%; right: 8px; transform: translateY(-50%); color: #D2D2D5;">search</span>
+        </div>
+    </div>
+    <div style="margin-top: 20px;">
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th colspan="2" style="text-align: left; padding-left: 8px;">Name</th>
+                    <th style="text-align: center;">Code</th>
+                    <th style="text-align: center;">Quantity</th>
+                    <th style="text-align: left;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of dataToShow">
+                    <td colspan="2" style="padding-left: 8px;">{{ item.productName }}</td>
+                    <td style="text-align: center;">{{ item.productId }}</td>
+                    <td style="text-align: center;" [ngStyle]="{'color': item.quantity <= 10 ? '#FF5739' : 'black'}">
+                        {{ item.quantity }}</td>
+                    <td style="text-align: right; padding-right: 8px; cursor: pointer;">
+                        <span class="material-icons md-48" style="color: #99AAB8;">more_vert</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
