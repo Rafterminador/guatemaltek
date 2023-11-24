@@ -1,7 +1,7 @@
-<div>
+<div style="display: flex; flex-direction: column; height: 100vh;">
     <app-navbar></app-navbar>
-    <div>
-        <app-sidebar></app-sidebar>
-        <router-outlet></router-outlet>
+    <div style="display: flex; flex: 1;">
+        <app-sidebar style="flex: 1; margin-right: 0;"></app-sidebar>
+        <router-outlet style="flex: 3; margin-top: 0;"></router-outlet>
     </div>
 </div>

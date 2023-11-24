@@ -1,1 +1,20 @@
-a
+<div class="container">
+    <ul>
+        <li (mouseover)="setActive(0)" (mouseleave)="setActive(-1)" [class.active]="isActiveList[0]">
+            <span style="width: 80%;">Dashboard</span>
+            <span class="material-icons md-48" style="margin-right: 5%;">dashboard_customize</span>
+        </li>
+        <li (mouseover)="setActive(1)" (mouseleave)="setActive(-1)" [class.active]="isActiveList[1]">
+            <span style="width: 80%;">Inventory</span>
+            <span class="material-icons md-48" style="margin-right: 5%;">inventory_2</span>
+        </li>
+        <li (mouseover)="setActive(2)" (mouseleave)="setActive(-1)" [class.active]="isActiveList[2]">
+            <span style="width: 80%;">Reports</span>
+            <span class="material-icons md-48" style="margin-right: 5%;">print</span>
+        </li>
+        <li (mouseover)="setActive(3)" (mouseleave)="setActive(-1)" [class.active]="isActiveList[3]">
+            <span style="width: 80%;">Settings</span>
+            <span class="material-icons md-48" style="margin-right: 5%;">settings</span>
+        </li>
+    </ul>
+</div>

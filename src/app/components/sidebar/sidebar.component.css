@@ -1,0 +1,32 @@
+.container {
+    background-color: #41515E;
+    height: 100%;
+    margin-top: -16px;
+}
+
+li {
+    list-style: none;
+    color: #8994A0;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 0px;
+}
+
+ul {
+    padding: 0px;
+}
+
+li:hover {
+    color: #E3ECF2;
+    background-color: #35424B;
+    cursor: pointer;
+}
+
+.active {
+    color: #E3ECF2;
+    background-color: #35424B;
+    cursor: pointer;
+}

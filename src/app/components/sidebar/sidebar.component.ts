@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
     styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-    // Lógica del componente aquí
+    isActiveList: boolean[] = [false, true, false, false];
+    setActive(index: number) {
+        if (index === -1) {
+            this.isActiveList = this.isActiveList.map(() => false);
+            this.isActiveList[1] = true;
+        } else {
+            this.isActiveList = this.isActiveList.map(() => false);
+            this.isActiveList[index] = true;
+        }
+    }
 }
